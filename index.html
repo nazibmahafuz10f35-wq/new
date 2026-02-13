@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title style="color: #640810;">For My Princess Raaiza 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Montserrat',sans-serif;
+  background:linear-gradient(135deg,#ffdde1,#ee9ca7,#ffd1ff);
+  overflow:hidden;
+  color:#fff;
+  text-align:center;
+}
+
+.page{
+  position:absolute;
+  width:100%;
+  height:100vh;
+  display:none;
+  opacity:0;
+  transition:0.6s;
+}
+
+.active{
+  display:block;
+  opacity:1;
+}
+
+h1{
+  font-family:'Great Vibes',cursive;
+  font-size:70px;
+  margin-top:70px;
+  text-shadow:0 0 20px rgba(255,255,255,0.8);
+}
+
+.subtitle{
+  font-size:22px;
+  margin-bottom:30px;
+}
+
+.options{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  margin-top:40px;
+  flex-wrap:wrap;
+}
+
+.card{
+  width:130px;
+  height:130px;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(15px);
+  border-radius:35px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:55px;
+  cursor:pointer;
+  transition:0.4s;
+  box-shadow:0 10px 40px rgba(0,0,0,0.2);
+}
+
+.card:hover{
+  transform:scale(1.2) rotate(8deg);
+  box-shadow:0 0 40px rgba(255,255,255,0.6);
+}
+
+.bottom{
+  position:absolute;
+  bottom:20px;
+  width:100%;
+}
+
+.button{
+  margin-top:25px;
+  padding:12px 35px;
+  background:white;
+  color:#ff4da6;
+  border-radius:40px;
+  cursor:pointer;
+  display:inline-block;
+  font-weight:bold;
+}
+
+.envelope{
+  font-size:120px;
+  cursor:pointer;
+  transition:0.5s;
+}
+
+.open{
+  transform:scale(1.3) rotateY(180deg);
+}
+
+.letter{
+  display:none;
+  width:80%;
+  margin:20px auto;
+  padding:30px;
+  background:rgba(255,255,255,0.2);
+  backdrop-filter:blur(15px);
+  border-radius:30px;
+  font-size:18px;
+  line-height:1.6;
+}
+
+.gallery img{
+  width:180px;
+  border-radius:25px;
+  margin:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.proposal button{
+  padding:15px 40px;
+  font-size:18px;
+  margin:20px;
+  border:none;
+  border-radius:40px;
+  cursor:pointer;
+}
+
+.yes{
+  background:white;
+  color:#ff2e88;
+}
+
+.no{
+  background:#999;
+  color:rgb(70, 11, 11);
+  position:absolute;
+}
+
+.heart{
+  position:absolute;
+  animation:float 6s linear infinite;
+  font-size:20px;
+}
+
+@keyframes float{
+  0%{transform:translateY(100vh);opacity:1;}
+  100%{transform:translateY(-10vh);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Romantic background instrumental -->
+<audio autoplay loop>
+<source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
+</audio>
+
+<script>
+for(let i=0;i<25;i++){
+ let heart=document.createElement("div");
+ heart.className="heart";
+ heart.innerHTML="💖";
+ heart.style.left=Math.random()*100+"vw";
+ heart.style.animationDuration=(Math.random()*3+3)+"s";
+ document.body.appendChild(heart);
+}
+</script>
+
+<!-- HOME -->
+<div class="page active" id="home">
+<h1 style="color: #640810;">Hey My Princess 💎</h1>
+<div class="subtitle">Choose Your Luxury Surprise</div>
+
+<div class="options">
+<div class="card" onclick="showPage('letterPage')">💌</div>
+<div class="card" onclick="showPage('galleryPage')">📸</div>
+<div class="card" onclick="showPage('musicPage')">🎵</div>
+<div class="card" onclick="showPage('proposalPage')">🔐</div>
+</div>
+
+<div class="bottom">Tap the icons, my love 💗</div>
+</div>
+
+<!-- LETTER -->
+<div class="page" id="letterPage">
+<h1 style="color: #640810;">A Private Letter 💌</h1>
+<div class="envelope" id="env" onclick="openLetter()">💌</div>
+
+<div cass="letter" id="letter"><h3 style="color: #640810;">
+My dearest Raaiza ❤️<br><br>
+You are not just my Valentine
+You are my peace, my happiness, my dream.
+Every moment with you feels like magic.
+I promise to protect your smile,
+cherish your heart,
+and love you endlessly.
+<br><br>
+Forever yours,<br>
+Nazib 💘
+</div>
+</h3>
+<div class="button" onclick="showPage('home')">Back</div>
+</div>
+
+<!-- GALLERY -->
+<div class="page" id="galleryPage">
+<h1 style="color: #640810;">
+  our Beautiful Memories 📸
+</h1>
+
+<div class="gallery">
+<img src="her 4.jpeg">
+<img src="her 2.jpeg">
+<img src="her 3.jpeg">
+</div>
+
+<div class="button" onclick="showPage('home')">Back</div>
+</div>
+
+<!-- MUSIC -->
+<div class="page" id="musicPage">
+<h1 style="color: #640810;">
+  This song reminds me of yours
+  <br></br>
+  <img src="203578866.jpg" alt="">
+</h1>
+<audio controls>
+  <source src="I Cant Help Falling.mp3" type="audio/mpeg">
+</audio>
+<div class="button" onclick="showPage('home')">Back</div>
+</div>
+
+<!-- PROPOSAL -->
+<div class="page" id="proposalPage">
+<h1 style="color: #640810;">
+  Will You Be Mine Forever? 💍
+</h1>
+
+<button class="yes" onclick="celebrate()">YES 💖</button>
+<button class="no" onmouseover="moveButton(this)">NO 😜</button>
+
+<div class="button" onclick="showPage('home')">Back</div>
+</div>
+
+<script>
+function showPage(id){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+}
+
+function openLetter(){
+ document.getElementById("env").classList.add("open");
+ document.getElementById("letter").style.display="block";
+}
+
+function moveButton(btn){
+ btn.style.top=Math.random()*400+"px";
+ btn.style.left=Math.random()*400+"px";
+}
+
+function celebrate(){
+ alert("You just made me the happiest man alive 😍💖");
+ for(let i=0;i<50;i++){
+  let spark=document.createElement("div");
+  spark.className="heart";
+  spark.innerHTML="✨";
+  spark.style.left=Math.random()*100+"vw";
+  spark.style.animationDuration="3s";
+  document.body.appendChild(spark);
+ }
+}
+</script>
+
+</body>
+</html>
